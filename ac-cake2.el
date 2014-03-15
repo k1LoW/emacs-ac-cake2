@@ -20,7 +20,7 @@
 ;; Version: 1.0.0
 ;; Author: k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>
 ;; URL: http://code.101000lab.org
-;; Package-Requires: ((cake2 "1.1.2") (auto-complete "1.4"))
+;; Package-Requires: ((cake2 "1.1.2") (auto-complete "1.4.0"))
 
 ;;; Usage
 ;;     (require 'ac-cake2)
