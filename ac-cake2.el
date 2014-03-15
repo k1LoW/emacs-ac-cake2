@@ -1,7 +1,7 @@
 ;;; ac-cake2.el --- CakePHP 2 Minor Mode auto-complete.el source
 ;; -*- Mode: Emacs-Lisp -*-
 
-;; Copyright (C) 2011 by 101000code/101000LAB
+;; Copyright (C) 2011-2014 by 101000code/101000LAB
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,15 +17,19 @@
 ;; along with this program; if not, write to the Free Software
 ;; Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
-;;
+;; Version: 1.0.0
 ;; Author: k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>
 ;; URL: http://code.101000lab.org
+;; Package-Requires: ((cake2 "1.1.2") (auto-complete "1.4"))
+
+;;; Usage
+;;     (require 'ac-cake2)
+;;     (add-hook 'cake2-hook 'ac-cake2-setup)
 
 ;;; Code:
 
-;;require
-(require 'cake2)
 (require 'auto-complete)
+(require 'cake2)
 
 (defvar ac-cake2-index nil
   "Index of CakePHP 2 candidates.")
@@ -74,6 +78,7 @@
           " | xargs grep '[^_]function' "
           "--with-filename"))
 
+;;;###autoload
 (ac-define-source cake2
   '((init . (lambda () (unless ac-cake2-index
                          (ac-cake2-build-index))))
@@ -81,9 +86,6 @@
     (requires . 3)
     (symbol . "f")))
 
-;; Hook
-(add-hook 'cake2-hook 'ac-cake2-setup)
-
 (provide 'ac-cake2)
 
-;;; Code ends
+;;; ac-cake2.el ends here
