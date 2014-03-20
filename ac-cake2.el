@@ -83,7 +83,7 @@
                          (ac-cake2-build-index))))
     (candidates . ac-cake2-index)
     (requires . 3)
-    (symbol . "f"))))
+    (symbol . "f")))
 
 (provide 'ac-cake2)
 
